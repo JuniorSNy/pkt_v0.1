@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="pkt_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="heap_ops" />
+            <top_module name="pkt_h" />
+            <top_module name="pkt_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="208"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group2304" type="group">
+      <obj_property name="label">top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/pkt_tb/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/pkt_ready" type="logic">
+         <obj_property name="ElementShortName">pkt_ready</obj_property>
+         <obj_property name="ObjectShortName">pkt_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/in_valid" type="logic">
+         <obj_property name="ElementShortName">in_valid</obj_property>
+         <obj_property name="ObjectShortName">in_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/in_enque_en" type="logic">
+         <obj_property name="ElementShortName">in_enque_en</obj_property>
+         <obj_property name="ObjectShortName">in_enque_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/in_ugr_en" type="logic">
+         <obj_property name="ElementShortName">in_ugr_en</obj_property>
+         <obj_property name="ObjectShortName">in_ugr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/out_valid" type="logic">
+         <obj_property name="ElementShortName">out_valid</obj_property>
+         <obj_property name="ObjectShortName">out_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/out_deque_en" type="logic">
+         <obj_property name="ElementShortName">out_deque_en</obj_property>
+         <obj_property name="ObjectShortName">out_deque_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/in_data" type="array">
+         <obj_property name="ElementShortName">in_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">in_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/in_pkt_info" type="array">
+         <obj_property name="ElementShortName">in_pkt_info</obj_property>
+         <obj_property name="ObjectShortName">in_pkt_info</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/out_data" type="array">
+         <obj_property name="ElementShortName">out_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/counter" type="array">
+         <obj_property name="ElementShortName">counter[31:0]</obj_property>
+         <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2305" type="group">
+      <obj_property name="label">test</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/pkt_tb/nr_pkt" type="array">
+         <obj_property name="ElementShortName">nr_pkt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">nr_pkt[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/info" type="array">
+         <obj_property name="ElementShortName">info[2047:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">info[2047:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/addr" type="array">
+         <obj_property name="ElementShortName">addr[2047:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[2047:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/gapn" type="array">
+         <obj_property name="ElementShortName">gapn[2047:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">gapn[2047:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/info_n" type="array">
+         <obj_property name="ElementShortName">info_n[31:0]</obj_property>
+         <obj_property name="ObjectShortName">info_n[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/addr_n" type="array">
+         <obj_property name="ElementShortName">addr_n[31:0]</obj_property>
+         <obj_property name="ObjectShortName">addr_n[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/gap_n" type="array">
+         <obj_property name="ElementShortName">gap_n[31:0]</obj_property>
+         <obj_property name="ObjectShortName">gap_n[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/pkt_en" type="logic">
+         <obj_property name="ElementShortName">pkt_en</obj_property>
+         <obj_property name="ObjectShortName">pkt_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/pkt_tb/TEST_NR" type="array">
+         <obj_property name="ElementShortName">TEST_NR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">TEST_NR[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

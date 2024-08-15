@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../pkt_scheduler.srcs/sources_1/imports/bbq/heap_ops.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/imports/pkt_design/BBQrouter.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/imports/pkt_design/FIFOdual.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/imports/bbq/bbq.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/imports/bbq/bram_simple2port.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/imports/bbq/ffs.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/new/pkt_h.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/imports/pkt_design/pkt_Priorer.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/imports/bbq/sc_fifo.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/new/top.sv" \
+"../../../../pkt_scheduler.srcs/sim_1/imports/arch design/pkt_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
