@@ -74,6 +74,21 @@ module pkt_sche_v0_1 #(
     
     always_comb begin
     end
+    integer ugr_cnt;
+    initial ugr_cnt = 0;
+    
+    integer bbq_a_cnt,bbq_b_cnt;
+    initial bbq_a_cnt = 0;
+    initial bbq_b_cnt = 0;
+    
+    always @(posedge clk) begin
+        if(BBQ_PQ_0_valid && BBQ_PQ_0_optype==HEAP_OP_DEQUE_MAX)begin
+            bbq_a_cnt = bbq_a_cnt+1;
+        end
+        if(BBQ_PQ_1_valid && BBQ_PQ_1_optype==HEAP_OP_DEQUE_MAX)begin
+            bbq_b_cnt = bbq_b_cnt+1;
+        end
+    end
     
     initial router_ctrl = 1;
     initial BBQ_out_op = HEAP_OP_DEQUE_MAX;
@@ -87,6 +102,10 @@ module pkt_sche_v0_1 #(
             router_ctrl = ~router_ctrl;
         end else begin
             router_counter <= router_counter+1;
+        end
+        
+        if(in_enque_en&&in_ugr_en)begin
+            ugr_cnt = ugr_cnt+1;
         end
     end
 
@@ -158,7 +177,12 @@ module pkt_sche_v0_1 #(
             if (BBQ_PQ_0_valid && BBQ_out_op==BBQ_PQ_0_optype) begin
                 bbq_nr0 = bbq_nr0 - 1;
             end
-            
+            if (router_o_1_valid && router_o_1_op_type==HEAP_OP_ENQUE) begin
+                bbq_nr1 = bbq_nr1 + 1;
+            end
+            if (BBQ_PQ_1_valid && BBQ_out_op==BBQ_PQ_1_optype) begin
+                bbq_nr1 = bbq_nr1 - 1;
+            end
         end
     end
 

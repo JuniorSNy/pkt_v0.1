@@ -19,7 +19,8 @@ module pkt_Priorer #(
     output  logic [PRIOR_WIDTH-1:0]                     out_prior
 );
 
-    
+    integer  out_cnt;
+    initial out_cnt = 0;
     logic       out_fail;
     logic       F_out_valid;
     Ringslot    FIFO_pkt_in_set;
@@ -41,6 +42,12 @@ module pkt_Priorer #(
         out_valid   = (Comp_in_set[SLOT_SIZE-1].NoF!=0)&&(Comp_in_set[SLOT_SIZE-1].valid==1);
         out_fail    = (Comp_in_set[SLOT_SIZE-1].NoF==0)&&(Comp_in_set[SLOT_SIZE-1].valid==1);
         
+    end
+    
+    always @(posedge clk)begin
+        if(out_valid)begin
+            out_cnt = out_cnt+1;
+        end
     end
 
 

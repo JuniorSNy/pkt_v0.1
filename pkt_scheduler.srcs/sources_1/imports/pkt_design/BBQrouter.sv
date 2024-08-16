@@ -27,16 +27,17 @@ module BBQ_router #(
     output  logic [DWIDTH-1:0]                          out_1_he_data,
     output  logic [PRIOR_WIDTH-1:0]                     out_1_he_priority
 );
-    
+    logic clk_div;
+    initial clk_div = 0;
 
     always_comb begin
         if(bbq_rdy)begin
             if (out_ctrl) begin
 
-                out_0_valid         = 1'b1;
-                out_0_op_type       = out_op;
+                out_0_valid         = clk_div;
+                out_0_op_type       = clk_div?out_op:HEAP_OP_ENQUE;
                 out_0_he_data       = 0;
-                out_0_he_priority   = 0;
+                out_0_he_priority   = 1;
 
                 out_1_valid         = in_enque_en;
                 out_1_op_type       = HEAP_OP_ENQUE;
@@ -50,10 +51,10 @@ module BBQ_router #(
                 out_0_he_data       = in_data;
                 out_0_he_priority   = in_prior;
 
-                out_1_valid         = 1'b1;
-                out_1_op_type       = out_op;
+                out_1_valid         = clk_div;
+                out_1_op_type       = clk_div?out_op:HEAP_OP_ENQUE;
                 out_1_he_data       = 0;
-                out_1_he_priority   = 0;
+                out_1_he_priority   = 1;
                 
             end
         end else begin
@@ -68,8 +69,17 @@ module BBQ_router #(
                 out_1_he_priority   = 0;
         end
     end
-
+    integer out_1_nr,out_0_nr;
+    initial out_0_nr = 0;
+    initial out_1_nr = 0;
     always @(posedge clk or posedge rst) begin
+        if(out_0_op_type==HEAP_OP_ENQUE && out_0_valid==1)begin
+            out_0_nr = out_0_nr+1;
+        end
+        if(out_1_op_type==HEAP_OP_ENQUE && out_1_valid==1)begin
+            out_1_nr = out_1_nr+1;
+        end
+        clk_div = ~clk_div;
     end
 
 endmodule
