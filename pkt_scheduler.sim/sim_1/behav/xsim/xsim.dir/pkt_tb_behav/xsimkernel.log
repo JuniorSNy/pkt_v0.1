@@ -2,3 +2,6 @@ Running: xsim.dir/pkt_tb_behav/xsimk.exe -simmode gui -wdb pkt_tb_behav.wdb -sim
 Design successfully loaded
 Design Loading Memory Usage: 14784 KB (Peak: 14784 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 25532 KB (Peak: 25532 KB)
+Simulation CPU Usage: 7108 ms
