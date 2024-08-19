@@ -6,6 +6,7 @@ sv xil_defaultlib  \
 "../../../../pkt_scheduler.srcs/sources_1/imports/bbq/bbq.sv" \
 "../../../../pkt_scheduler.srcs/sources_1/imports/bbq/bram_simple2port.sv" \
 "../../../../pkt_scheduler.srcs/sources_1/imports/bbq/ffs.sv" \
+"../../../../pkt_scheduler.srcs/sources_1/new/pkt_design.sv" \
 "../../../../pkt_scheduler.srcs/sources_1/new/pkt_h.sv" \
 "../../../../pkt_scheduler.srcs/sources_1/imports/pkt_design/pkt_Priorer.sv" \
 "../../../../pkt_scheduler.srcs/sources_1/imports/bbq/sc_fifo.sv" \

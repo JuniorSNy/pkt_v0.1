@@ -46,7 +46,7 @@ module pkt_tb;
 //            in_ugr_en = ((counter%10==9||counter%10==0)&(pkt_ready))?1:0;
         in_data = pkt_ready?addr_n:0;
         in_pkt_info = pkt_ready?info_n:0;
-        in_enque_en = pkt_en;
+        in_enque_en = pkt_en && (nr_pkt<32'd2048);
         in_ugr_en = ((nr_pkt%10==9||nr_pkt%10==0)&(pkt_ready))?1:0;
     end
     
@@ -74,6 +74,9 @@ module pkt_tb;
             end
             if(counter>64)begin
                 $stop;
+//                info_n = 0;
+//                addr_n = 0;
+                //gap_n = 0;
             end
         end
     end

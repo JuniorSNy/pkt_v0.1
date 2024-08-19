@@ -1,67 +1,60 @@
 import pkt_h::*;
 `timescale 1 ns/10 ps
 
-module Pri_tb;
+//typedef struct packed {
+//    // logic out_valid;
+//    logic               valid;
+//    logic [15:0]        NoF;
+//    logic [3:0]         MatchFail;
+//    pkHeadInfo          Info;
+//} RecordSpot;
 
-    logic clk;
-    logic rst;
-    int i;
-    // logic init_done;
-    // initial counter = 0;
-    // initial init_done = 0;
-    // initial test_timer = 0;
+module Pri_tb;
+    parameter TEST_NR = 2048;
+    
+    logic [31:0]    info_n,addr_n;
+    int gap_n;
+    
+    logic [31:0]    info   [TEST_NR-1:0];
+    logic [31:0]    addr   [TEST_NR-1:0];
+    int             gapn   [TEST_NR-1:0];
+    int             nr_pkt;
+    logic clk,rst;
+    always #10 clk = ~clk;
+    logic [31:0] pkt_in_info,pkt_in_data,pkt_out_data,pkt_out_prior;
+    
     logic pkt_in_en;
-    logic pkt_in_valid;
-    pkHeadInfo pkt_in_info;
-    logic [pkt_Priorer_inst.DWIDTH-1:0] pkt_in_data,pkt_out_data;
-    logic [pkt_Priorer_inst.PRIOR_WIDTH-1:0] pkt_out_prior;
-    logic pkt_out_valid;
-    logic [31:0] randomline;
-    
-        reg [31:0] dataArray [2048-1:0];
-        initial begin
-            $readmemh("rddata.hex",dataArray,0,2047);
-        end
-    
-    logic [31:0] data_t;
-    always_comb data_t = dataArray[i];
-    initial clk = 0;
-    initial rst = 1;
-    initial i = 0;
-    initial pkt_in_en = 0;
-    always #(10) clk = ~clk;
-    integer log_o;
-    initial log_o = $fopen("tb_log.txt");
-    
-    always @(posedge clk) begin
-        rst <= 0;
-        pkt_in_en <= 1;
-        i=i+1;
-        randomline =  $random();
-    
-        pkt_in_info.key <= randomline%7 + 16;
-        pkt_in_data <= randomline%7 + 1;
-        $fdisplay(log_o,"%d",pkt_in_data);
-        // o_fifo_data <= {$random(),$random(),$random(),$random(),$random(),$random(),$random(),$random()};
-        // test_timer <= test_timer + 1;
-        // in_data_addr <= $random();
-    
-        // if (test_timer) begin
-        //     if (in_valid==1'b0) begin
-        //         in_enque_en = 1'b0;
-        //         out_deque_en = 1'b1;
-        //     end
-        //     if (test_timer > 30) begin
-        //         $display("testbench init timed out");
-        //         $finish;
-        //     end
-        // end
+    logic pkt_in_valid,pkt_out_valid;
+    initial begin
+        nr_pkt = 0;
+        clk = 0;
+        rst = 1;
+        $readmemh("head_info.txt",info);
+        $readmemh("buff_addr.txt",addr);
+        $readmemh("buff_gapn.txt",gapn);
+    end
+    always_comb begin
+        info_n = info[nr_pkt];
+        addr_n = addr[nr_pkt];
+        gap_n = gapn[nr_pkt];
+        
+        pkt_in_info = info_n;
+        pkt_in_data = addr_n;
+        
+        pkt_in_en = ( nr_pkt<2048 );
     end
     
+    always @(posedge clk)begin
+        rst = 0;
+        if(pkt_in_en)begin
+            nr_pkt = nr_pkt+1;
+        end
+        if( nr_pkt == 2048 ) begin
+            $stop();
+        end
+    end
     
-    pkt_Priorer #(
-        // .DWIDTH(64),
-        // .QUEUE_SIZE(21)
+    pkt_Priorer_v0_2 #(
     ) pkt_Priorer_inst (
         .clk(clk),
         .rst(rst),

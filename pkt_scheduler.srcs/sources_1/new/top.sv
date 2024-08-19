@@ -97,7 +97,7 @@ module pkt_sche_v0_1 #(
 
     always @(posedge clk ) begin
         ready <= ready | (BBQ_PQ_0_rdy&&BBQ_PQ_1_rdy);
-        if(router_counter==10'd10)begin
+        if(router_counter==32'd1000)begin
             router_counter <= 0;
             router_ctrl = ~router_ctrl;
         end else begin
@@ -123,6 +123,7 @@ module pkt_sche_v0_1 #(
 
         .out_ctrl(router_ctrl),
         .out_op(BBQ_out_op),
+        .out_en(1'b1),
 
         .out_0_valid(router_o_0_valid),
         .out_0_op_type(router_o_0_op_type),
@@ -206,7 +207,7 @@ module pkt_sche_v0_1 #(
 
     FIFOdual  #(
         .DWIDTH(DWIDTH),
-        .QUEUE_SIZE(QUEUE_SIZE)
+        .QUEUE_SIZE(512)
     ) out_Ugr_buffer (
         .clk(clk),
         .rst(rst),

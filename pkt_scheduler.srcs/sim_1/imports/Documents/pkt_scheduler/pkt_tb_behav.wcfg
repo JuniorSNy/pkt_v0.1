@@ -3,410 +3,168 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="pkt_tb_behav.wdb" id="1">
+      <db_ref path="Pri_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="Pri_tb" />
+            <top_module name="\$unit_FIFOdual_sv_3623410928 " />
             <top_module name="glbl" />
-            <top_module name="heap_ops" />
             <top_module name="pkt_h" />
-            <top_module name="pkt_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3,294,431.889 ns"></ZoomStartTime>
-      <ZoomEndTime time="3,295,653.623 ns"></ZoomEndTime>
-      <Cursor1Time time="3,294,150.000 ns"></Cursor1Time>
+      <ZoomStartTime time="34,330.334 ns"></ZoomStartTime>
+      <ZoomEndTime time="36,368.335 ns"></ZoomEndTime>
+      <Cursor1Time time="35,890.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="208"></NameColumnWidth>
-      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+      <NameColumnWidth column_width="200"></NameColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wvobject fp_name="group2304" type="group">
       <obj_property name="label">top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/pkt_tb/clk" type="logic">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/rst" type="logic">
-         <obj_property name="ElementShortName">rst</obj_property>
-         <obj_property name="ObjectShortName">rst</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_ready" type="logic">
-         <obj_property name="ElementShortName">pkt_ready</obj_property>
-         <obj_property name="ObjectShortName">pkt_ready</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/in_valid" type="logic">
-         <obj_property name="ElementShortName">in_valid</obj_property>
-         <obj_property name="ObjectShortName">in_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/in_enque_en" type="logic">
-         <obj_property name="ElementShortName">in_enque_en</obj_property>
-         <obj_property name="ObjectShortName">in_enque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/in_ugr_en" type="logic">
-         <obj_property name="ElementShortName">in_ugr_en</obj_property>
-         <obj_property name="ObjectShortName">in_ugr_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/out_valid" type="logic">
-         <obj_property name="ElementShortName">out_valid</obj_property>
-         <obj_property name="ObjectShortName">out_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/out_deque_en" type="logic">
-         <obj_property name="ElementShortName">out_deque_en</obj_property>
-         <obj_property name="ObjectShortName">out_deque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/nr_pkt" type="array">
-         <obj_property name="ElementShortName">nr_pkt[31:0]</obj_property>
-         <obj_property name="ObjectShortName">nr_pkt[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/info_n" type="array">
-         <obj_property name="ElementShortName">info_n[31:0]</obj_property>
-         <obj_property name="ObjectShortName">info_n[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/addr_n" type="array">
-         <obj_property name="ElementShortName">addr_n[31:0]</obj_property>
-         <obj_property name="ObjectShortName">addr_n[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/gap_n" type="array">
-         <obj_property name="ElementShortName">gap_n[31:0]</obj_property>
-         <obj_property name="ObjectShortName">gap_n[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_en" type="logic">
-         <obj_property name="ElementShortName">pkt_en</obj_property>
-         <obj_property name="ObjectShortName">pkt_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/out_data" type="array">
-         <obj_property name="ElementShortName">out_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/counter" type="array">
-         <obj_property name="ElementShortName">counter[31:0]</obj_property>
-         <obj_property name="ObjectShortName">counter[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/glo_cnt" type="array">
-         <obj_property name="ElementShortName">glo_cnt[31:0]</obj_property>
-         <obj_property name="ObjectShortName">glo_cnt[31:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="group166" type="group">
       <obj_property name="label">internal_priorer</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/clk" type="logic">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/rst" type="logic">
-         <obj_property name="ElementShortName">rst</obj_property>
-         <obj_property name="ObjectShortName">rst</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/in_en" type="logic">
-         <obj_property name="ElementShortName">in_en</obj_property>
-         <obj_property name="ObjectShortName">in_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/in_valid" type="logic">
-         <obj_property name="ElementShortName">in_valid</obj_property>
-         <obj_property name="ObjectShortName">in_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/in_pkt_info" type="array">
-         <obj_property name="ElementShortName">in_pkt_info</obj_property>
-         <obj_property name="ObjectShortName">in_pkt_info</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/in_data" type="array">
-         <obj_property name="ElementShortName">in_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">in_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/out_data" type="array">
-         <obj_property name="ElementShortName">out_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/out_prior" type="array">
-         <obj_property name="ElementShortName">out_prior[5:0]</obj_property>
-         <obj_property name="ObjectShortName">out_prior[5:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/out_fail" type="logic">
-         <obj_property name="ElementShortName">out_fail</obj_property>
-         <obj_property name="ObjectShortName">out_fail</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/F_out_valid" type="logic">
-         <obj_property name="ElementShortName">F_out_valid</obj_property>
-         <obj_property name="ObjectShortName">F_out_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/FIFO_pkt_in_set" type="array">
-         <obj_property name="ElementShortName">FIFO_pkt_in_set</obj_property>
-         <obj_property name="ObjectShortName">FIFO_pkt_in_set</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/FIFO_out_set" type="array">
-         <obj_property name="ElementShortName">FIFO_out_set</obj_property>
-         <obj_property name="ObjectShortName">FIFO_out_set</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/Slot_in_set" type="array">
-         <obj_property name="ElementShortName">Slot_in_set[7:0]</obj_property>
-         <obj_property name="ObjectShortName">Slot_in_set[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/Comp_in_set" type="array">
-         <obj_property name="ElementShortName">Comp_in_set[7:0]</obj_property>
-         <obj_property name="ObjectShortName">Comp_in_set[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/FIFO_out_data" type="array">
-         <obj_property name="ElementShortName">FIFO_out_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">FIFO_out_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/Comp_in_data" type="array">
-         <obj_property name="ElementShortName">Comp_in_data[7:0][31:0]</obj_property>
-         <obj_property name="ObjectShortName">Comp_in_data[7:0][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/DWIDTH" type="array">
-         <obj_property name="ElementShortName">DWIDTH[31:0]</obj_property>
-         <obj_property name="ObjectShortName">DWIDTH[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/SLOT_SIZE" type="array">
-         <obj_property name="ElementShortName">SLOT_SIZE[31:0]</obj_property>
-         <obj_property name="ObjectShortName">SLOT_SIZE[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/QUEUE_SIZE" type="array">
-         <obj_property name="ElementShortName">QUEUE_SIZE[31:0]</obj_property>
-         <obj_property name="ObjectShortName">QUEUE_SIZE[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/prior_calculator/PRIOR_WIDTH" type="array">
-         <obj_property name="ElementShortName">PRIOR_WIDTH[31:0]</obj_property>
-         <obj_property name="ObjectShortName">PRIOR_WIDTH[31:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="group167" type="group">
       <obj_property name="label">internal_fifo1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/clk" type="logic">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/rst" type="logic">
-         <obj_property name="ElementShortName">rst</obj_property>
-         <obj_property name="ObjectShortName">rst</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/in_valid" type="logic">
-         <obj_property name="ElementShortName">in_valid</obj_property>
-         <obj_property name="ObjectShortName">in_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/inA_enque_en" type="logic">
-         <obj_property name="ElementShortName">inA_enque_en</obj_property>
-         <obj_property name="ObjectShortName">inA_enque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/inA_data" type="array">
-         <obj_property name="ElementShortName">inA_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">inA_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/inB_enque_en" type="logic">
-         <obj_property name="ElementShortName">inB_enque_en</obj_property>
-         <obj_property name="ObjectShortName">inB_enque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/inB_data" type="array">
-         <obj_property name="ElementShortName">inB_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">inB_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/out_deque_en" type="logic">
-         <obj_property name="ElementShortName">out_deque_en</obj_property>
-         <obj_property name="ObjectShortName">out_deque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/out_valid" type="logic">
-         <obj_property name="ElementShortName">out_valid</obj_property>
-         <obj_property name="ObjectShortName">out_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/out_data" type="array">
-         <obj_property name="ElementShortName">out_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/counter" type="array">
-         <obj_property name="ElementShortName">counter[63:0]</obj_property>
-         <obj_property name="ObjectShortName">counter[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/OutBuff" type="array">
-         <obj_property name="ElementShortName">OutBuff[15:0][31:0]</obj_property>
-         <obj_property name="ObjectShortName">OutBuff[15:0][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/OutBuffHead" type="array">
-         <obj_property name="ElementShortName">OutBuffHead[3:0]</obj_property>
-         <obj_property name="ObjectShortName">OutBuffHead[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/OutBuffTail" type="array">
-         <obj_property name="ElementShortName">OutBuffTail[3:0]</obj_property>
-         <obj_property name="ObjectShortName">OutBuffTail[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/nextTail_p1" type="array">
-         <obj_property name="ElementShortName">nextTail_p1[3:0]</obj_property>
-         <obj_property name="ObjectShortName">nextTail_p1[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/nextTail_p2" type="array">
-         <obj_property name="ElementShortName">nextTail_p2[3:0]</obj_property>
-         <obj_property name="ObjectShortName">nextTail_p2[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/nextHead" type="array">
-         <obj_property name="ElementShortName">nextHead[3:0]</obj_property>
-         <obj_property name="ObjectShortName">nextHead[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/DWIDTH" type="array">
-         <obj_property name="ElementShortName">DWIDTH[31:0]</obj_property>
-         <obj_property name="ObjectShortName">DWIDTH[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_buffer/QUEUE_SIZE" type="array">
-         <obj_property name="ElementShortName">QUEUE_SIZE[31:0]</obj_property>
-         <obj_property name="ObjectShortName">QUEUE_SIZE[31:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="group168" type="group">
       <obj_property name="label">internal_fifo2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/clk" type="logic">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/rst" type="logic">
-         <obj_property name="ElementShortName">rst</obj_property>
-         <obj_property name="ObjectShortName">rst</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/in_valid" type="logic">
-         <obj_property name="ElementShortName">in_valid</obj_property>
-         <obj_property name="ObjectShortName">in_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/inA_enque_en" type="logic">
-         <obj_property name="ElementShortName">inA_enque_en</obj_property>
-         <obj_property name="ObjectShortName">inA_enque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/inA_data" type="array">
-         <obj_property name="ElementShortName">inA_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">inA_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/inB_enque_en" type="logic">
-         <obj_property name="ElementShortName">inB_enque_en</obj_property>
-         <obj_property name="ObjectShortName">inB_enque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/inB_data" type="array">
-         <obj_property name="ElementShortName">inB_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">inB_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/out_deque_en" type="logic">
-         <obj_property name="ElementShortName">out_deque_en</obj_property>
-         <obj_property name="ObjectShortName">out_deque_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/out_valid" type="logic">
-         <obj_property name="ElementShortName">out_valid</obj_property>
-         <obj_property name="ObjectShortName">out_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/out_data" type="array">
-         <obj_property name="ElementShortName">out_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/counter" type="array">
-         <obj_property name="ElementShortName">counter[63:0]</obj_property>
-         <obj_property name="ObjectShortName">counter[63:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/OutBuff" type="array">
-         <obj_property name="ElementShortName">OutBuff[15:0][31:0]</obj_property>
-         <obj_property name="ObjectShortName">OutBuff[15:0][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/OutBuffHead" type="array">
-         <obj_property name="ElementShortName">OutBuffHead[3:0]</obj_property>
-         <obj_property name="ObjectShortName">OutBuffHead[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/OutBuffTail" type="array">
-         <obj_property name="ElementShortName">OutBuffTail[3:0]</obj_property>
-         <obj_property name="ObjectShortName">OutBuffTail[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/nextTail_p1" type="array">
-         <obj_property name="ElementShortName">nextTail_p1[3:0]</obj_property>
-         <obj_property name="ObjectShortName">nextTail_p1[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/nextTail_p2" type="array">
-         <obj_property name="ElementShortName">nextTail_p2[3:0]</obj_property>
-         <obj_property name="ObjectShortName">nextTail_p2[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/nextHead" type="array">
-         <obj_property name="ElementShortName">nextHead[3:0]</obj_property>
-         <obj_property name="ObjectShortName">nextHead[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/DWIDTH" type="array">
-         <obj_property name="ElementShortName">DWIDTH[31:0]</obj_property>
-         <obj_property name="ObjectShortName">DWIDTH[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/out_Ugr_buffer/QUEUE_SIZE" type="array">
-         <obj_property name="ElementShortName">QUEUE_SIZE[31:0]</obj_property>
-         <obj_property name="ObjectShortName">QUEUE_SIZE[31:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="group1197" type="group">
       <obj_property name="label">bbq_out</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_0_valid" type="logic">
-         <obj_property name="ElementShortName">router_o_0_valid</obj_property>
-         <obj_property name="ObjectShortName">router_o_0_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_0_op_type" type="array">
-         <obj_property name="ElementShortName">router_o_0_op_type[1:0]</obj_property>
-         <obj_property name="ObjectShortName">router_o_0_op_type[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_0_he_data" type="array">
-         <obj_property name="ElementShortName">router_o_0_he_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">router_o_0_he_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_0_he_priority" type="array">
-         <obj_property name="ElementShortName">router_o_0_he_priority[5:0]</obj_property>
-         <obj_property name="ObjectShortName">router_o_0_he_priority[5:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_0_addr" type="array">
-         <obj_property name="ElementShortName">BBQ_PQ_0_addr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_0_addr[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_0_valid" type="logic">
-         <obj_property name="ElementShortName">BBQ_PQ_0_valid</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_0_valid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_0_rdy" type="logic">
-         <obj_property name="ElementShortName">BBQ_PQ_0_rdy</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_0_rdy</obj_property>
-      </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_0_optype" type="array">
-         <obj_property name="ElementShortName">BBQ_PQ_0_optype[1:0]</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_0_optype[1:0]</obj_property>
-      </wvobject>
       <wvobject type="divider" fp_name="divider1690">
          <obj_property name="label">New Divider 1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="BkColor">#808080</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_1_valid" type="logic">
-         <obj_property name="ElementShortName">router_o_1_valid</obj_property>
-         <obj_property name="ObjectShortName">router_o_1_valid</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_1_op_type" type="array">
-         <obj_property name="ElementShortName">router_o_1_op_type[1:0]</obj_property>
-         <obj_property name="ObjectShortName">router_o_1_op_type[1:0]</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_1_he_data" type="array">
-         <obj_property name="ElementShortName">router_o_1_he_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">router_o_1_he_data[31:0]</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/in_en" type="logic">
+         <obj_property name="ElementShortName">in_en</obj_property>
+         <obj_property name="ObjectShortName">in_en</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/router_o_1_he_priority" type="array">
-         <obj_property name="ElementShortName">router_o_1_he_priority[5:0]</obj_property>
-         <obj_property name="ObjectShortName">router_o_1_he_priority[5:0]</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/in_valid" type="logic">
+         <obj_property name="ElementShortName">in_valid</obj_property>
+         <obj_property name="ObjectShortName">in_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_1_addr" type="array">
-         <obj_property name="ElementShortName">BBQ_PQ_1_addr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_1_addr[31:0]</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/in_pkt_info" type="array">
+         <obj_property name="ElementShortName">in_pkt_info</obj_property>
+         <obj_property name="ObjectShortName">in_pkt_info</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_1_valid" type="logic">
-         <obj_property name="ElementShortName">BBQ_PQ_1_valid</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_1_valid</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/in_data" type="array">
+         <obj_property name="ElementShortName">in_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">in_data[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_1_rdy" type="logic">
-         <obj_property name="ElementShortName">BBQ_PQ_1_rdy</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_1_rdy</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/out_valid" type="logic">
+         <obj_property name="ElementShortName">out_valid</obj_property>
+         <obj_property name="ObjectShortName">out_valid</obj_property>
       </wvobject>
-      <wvobject fp_name="/pkt_tb/pkt_sche_v0_1_inst/BBQ_PQ_1_optype" type="array">
-         <obj_property name="ElementShortName">BBQ_PQ_1_optype[1:0]</obj_property>
-         <obj_property name="ObjectShortName">BBQ_PQ_1_optype[1:0]</obj_property>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/out_data" type="array">
+         <obj_property name="ElementShortName">out_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/out_prior" type="array">
+         <obj_property name="ElementShortName">out_prior[5:0]</obj_property>
+         <obj_property name="ObjectShortName">out_prior[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/ppl_pkt" type="array">
+         <obj_property name="ElementShortName">ppl_pkt[8:0]</obj_property>
+         <obj_property name="ObjectShortName">ppl_pkt[8:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/ppl_data" type="array">
+         <obj_property name="ElementShortName">ppl_data[8:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">ppl_data[8:0][31:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/recordStack" type="array">
+         <obj_property name="ElementShortName">recordStack[7:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">recordStack[7:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/match" type="array">
+         <obj_property name="ElementShortName">match[7:0]</obj_property>
+         <obj_property name="ObjectShortName">match[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/matchNum" type="array">
+         <obj_property name="ElementShortName">matchNum[7:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">matchNum[7:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/empty" type="array">
+         <obj_property name="ElementShortName">empty[7:0]</obj_property>
+         <obj_property name="ObjectShortName">empty[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/emptyNum" type="array">
+         <obj_property name="ElementShortName">emptyNum[7:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">emptyNum[7:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/LRU_Num" type="array">
+         <obj_property name="ElementShortName">LRU_Num[7:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">LRU_Num[7:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/FIFO_pkt_in_set" type="array">
+         <obj_property name="ElementShortName">FIFO_pkt_in_set</obj_property>
+         <obj_property name="ObjectShortName">FIFO_pkt_in_set</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/FIFO_pkt_re_en" type="array">
+         <obj_property name="ElementShortName">FIFO_pkt_re_en</obj_property>
+         <obj_property name="ObjectShortName">FIFO_pkt_re_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/FIFO_out_set" type="array">
+         <obj_property name="ElementShortName">FIFO_out_set</obj_property>
+         <obj_property name="ObjectShortName">FIFO_out_set</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/ppl_end_set" type="array">
+         <obj_property name="ElementShortName">ppl_end_set</obj_property>
+         <obj_property name="ObjectShortName">ppl_end_set</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/out_fail" type="logic">
+         <obj_property name="ElementShortName">out_fail</obj_property>
+         <obj_property name="ObjectShortName">out_fail</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/FIFO_out_data" type="array">
+         <obj_property name="ElementShortName">FIFO_out_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_out_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/F_out_valid" type="logic">
+         <obj_property name="ElementShortName">F_out_valid</obj_property>
+         <obj_property name="ObjectShortName">F_out_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/DWIDTH" type="array">
+         <obj_property name="ElementShortName">DWIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DWIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/SLOT_SIZE" type="array">
+         <obj_property name="ElementShortName">SLOT_SIZE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">SLOT_SIZE[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/SLOT_WIDTH" type="array">
+         <obj_property name="ElementShortName">SLOT_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">SLOT_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/PRIOR_WIDTH" type="array">
+         <obj_property name="ElementShortName">PRIOR_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PRIOR_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Pri_tb/pkt_Priorer_inst/SET" type="array">
+         <obj_property name="ElementShortName">SET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">SET[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

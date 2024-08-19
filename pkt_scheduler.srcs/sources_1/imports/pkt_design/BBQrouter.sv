@@ -11,6 +11,7 @@ module BBQ_router #(
     // Routing the bbq_op to one of bbq_insts according to out_ctrl, and dequeue another bbq_inst
     input   logic                                       bbq_rdy,
     input   logic                                       out_ctrl,
+    input   logic                                       out_en,
     input   heap_op_t                                   out_op,
     input   logic                                       in_enque_en,
     input   logic [DWIDTH-1:0]                          in_data,
@@ -34,8 +35,8 @@ module BBQ_router #(
         if(bbq_rdy)begin
             if (out_ctrl) begin
 
-                out_0_valid         = clk_div;
-                out_0_op_type       = clk_div?out_op:HEAP_OP_ENQUE;
+                out_0_valid         = out_en;
+                out_0_op_type       = out_en?out_op:HEAP_OP_ENQUE;
                 out_0_he_data       = 0;
                 out_0_he_priority   = 1;
 
@@ -51,8 +52,8 @@ module BBQ_router #(
                 out_0_he_data       = in_data;
                 out_0_he_priority   = in_prior;
 
-                out_1_valid         = clk_div;
-                out_1_op_type       = clk_div?out_op:HEAP_OP_ENQUE;
+                out_1_valid         = out_en;
+                out_1_op_type       = out_en?out_op:HEAP_OP_ENQUE;
                 out_1_he_data       = 0;
                 out_1_he_priority   = 1;
                 

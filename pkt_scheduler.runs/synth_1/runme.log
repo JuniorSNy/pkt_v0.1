@@ -1,0 +1,47 @@
+
+*** Running vivado
+    with args -log pkt_sche_v0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pkt_sche_v0_1.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source pkt_sche_v0_1.tcl -notrace
+Command: synth_design -top pkt_sche_v0_1 -part xcvu13p-fhgb2104-2L-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvu13p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu13p'
+INFO: [Device 21-403] Loading part xcvu13p-fhgb2104-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15044
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+CRITICAL WARNING: [Synth 8-10644] design element 'heap_ops' is previously defined; ignoring this definition [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/new/pkt_design.sv:53]
+INFO: [Synth 8-9937] previous definition of design element 'heap_ops' is here [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/bbq/heap_ops.sv:9]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of package 'pkt_h' [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/new/pkt_h.sv:26]
+INFO: [Synth 8-9937] previous definition of design element 'pkt_h' is here [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/new/pkt_design.sv:43]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2727.906 ; gain = 400.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pkt_sche_v0_1' [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/new/top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'pkt_Priorer' [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/pkt_design/pkt_Priorer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'FIFOdual' [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/pkt_design/FIFOdual.sv:3]
+	Parameter DWIDTH bound to: 85 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FIFOdual' (0#1) [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/pkt_design/FIFOdual.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'pkt_Priorer' (0#1) [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/pkt_design/pkt_Priorer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'BBQ_router' [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/pkt_design/BBQrouter.sv:3]
+ERROR: [Synth 8-91] ambiguous clock in event control [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/pkt_design/BBQrouter.sv:76]
+ERROR: [Synth 8-6156] failed synthesizing module 'BBQ_router' [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/imports/pkt_design/BBQrouter.sv:3]
+ERROR: [Synth 8-6156] failed synthesizing module 'pkt_sche_v0_1' [C:/Users/shiji/Documents/pkt_scheduler/pkt_scheduler.srcs/sources_1/new/top.sv:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2828.664 ; gain = 501.293
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 0 Warnings, 2 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sat Aug 17 23:55:25 2024...
